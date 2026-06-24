@@ -1,0 +1,6 @@
+patch:
+  app_options/com.microsoft.VSCode:
+    ascii_mode: false
+    ascii_punct: false
+  app_options/com.apple.Terminal:
+    ascii_mode: false

@@ -1,0 +1,16 @@
+# Rime/Squirrel generated and machine-local state.
+build/
+sync/
+*.userdb/
+*.userdb
+*.log
+*.ldb
+*.bin
+*.tmp
+
+# Machine-specific identity/state.
+installation.yaml
+user.yaml
+
+# macOS noise.
+.DS_Store
