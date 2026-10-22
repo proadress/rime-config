@@ -13,15 +13,6 @@ Last checked: 2026-07-10
 - Optional test scheme: `bopomofo_pro` adds a Traditional-Chinese word-level
   grammar model without changing the existing `bopomofo` scheme.
 
-## Clipboard
-
-- Maccy 2.6.1 is installed at `/Applications/Maccy.app` and has Accessibility
-  permission.
-- Its safe portable settings are held in `clipboard/maccy/settings.sh`.
-- Its live history is stored under
-  `~/Library/Containers/org.p0deje.Maccy/Data/Library/Application Support/Maccy/`
-  and is never collected.
-
 ## Maintenance rule
 
 Audit a tool before adding it. Track only portable, reviewable settings and add

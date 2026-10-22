@@ -23,15 +23,3 @@ if [ -x "$squirrel_bin" ]; then
 else
   printf 'Squirrel is not installed; files were restored without reload.\n' >&2
 fi
-
-maccy_settings="$repo_root/clipboard/maccy/settings.sh"
-if [ -f "$maccy_settings" ]; then
-  # shellcheck source=/dev/null
-  . "$maccy_settings"
-  defaults write org.p0deje.Maccy historySize -int "$maccy_history_size"
-  defaults write org.p0deje.Maccy pasteByDefault -bool "$maccy_paste_by_default"
-  defaults write org.p0deje.Maccy KeyboardShortcuts_popup -string "$maccy_popup_shortcut_json"
-  printf 'Restored Maccy preferences; relaunch Maccy if it is already open.\n'
-else
-  printf 'No tracked Maccy preferences found.\n'
-fi

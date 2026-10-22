@@ -14,13 +14,6 @@ predict.db
 installation.yaml
 user.yaml
 
-# Clipboard contents and history databases must never be committed.
-clipboard/history/
-clipboard/**/*.sqlite
-clipboard/**/*.sqlite-shm
-clipboard/**/*.sqlite-wal
-clipboard/**/*.db
-
 # Secrets and local overrides.
 .env
 .env.*
