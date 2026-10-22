@@ -13,3 +13,23 @@ generative AI model and it does not upload typed text.
 
 Install it with `scripts/install-bopomofo-pro-model.sh`. The binary belongs in
 `~/Library/Rime` and is deliberately excluded from Git.
+
+# Wanxiang grammar model (optional test scheme)
+
+`bopomofo_pro_wx` is a side-by-side variant of `bopomofo_pro` that swaps in
+the Wanxiang (萬象) project's much larger Traditional-Chinese grammar model,
+to compare contextual-ranking quality against the default 10 MB model above.
+
+- Source: `https://github.com/amzxyz/rime-wanxiang-data`, release tag `LTS`
+- File: `wanxiang-lts-zh-hant.gram`
+- Size: ~400 MB (grows over time; the author updates this asset in place)
+- License: CC-BY-4.0
+
+Unlike the model above, this is a **rolling** release with no fixed revision
+or checksum to pin against, so `scripts/install-wanxiang-model.sh` always
+fetches whatever is currently published and does not verify its contents.
+It is a community (not official Rime) project; treat `bopomofo_pro_wx` as
+experimental and keep using `bopomofo_pro` if it doesn't clearly do better.
+
+Install it with `scripts/install-wanxiang-model.sh`. The binary belongs in
+`~/Library/Rime` and is deliberately excluded from Git.

@@ -8,7 +8,7 @@ squirrel_bin='/Library/Input Methods/Squirrel.app/Contents/MacOS/Squirrel'
 
 mkdir -p "$rime_dir"
 
-for name in default.custom.yaml squirrel.custom.yaml bopomofo_pro.schema.yaml; do
+for name in default.custom.yaml squirrel.custom.yaml bopomofo_pro.schema.yaml bopomofo_pro_wx.schema.yaml; do
   if [ ! -f "$source_dir/$name" ]; then
     printf 'Missing repository file: %s\n' "$source_dir/$name" >&2
     exit 1

@@ -6,7 +6,7 @@ source_dir="$repo_root/input-method/rime"
 rime_dir=${RIME_DIR:-"$HOME/Library/Rime"}
 status=0
 
-for name in default.custom.yaml squirrel.custom.yaml bopomofo_pro.schema.yaml; do
+for name in default.custom.yaml squirrel.custom.yaml bopomofo_pro.schema.yaml bopomofo_pro_wx.schema.yaml; do
   repo_file="$source_dir/$name"
   local_file="$rime_dir/$name"
   if [ ! -f "$local_file" ]; then
@@ -42,6 +42,15 @@ if [ -f "$model_file" ] && [ "$(shasum -a 256 "$model_file" | awk '{print $1}')"
 else
   printf 'MISSING or DIFF Zhuyin Traditional language model\n'
   status=1
+fi
+
+# The Wanxiang grammar model is a rolling community download with no pinned
+# checksum (see scripts/install-wanxiang-model.sh), so only check presence.
+wx_model_file="$rime_dir/wanxiang-lts-zh-hant.gram"
+if [ -f "$wx_model_file" ]; then
+  printf 'FOUND Wanxiang test grammar model\n'
+else
+  printf 'MISSING Wanxiang test grammar model (optional; run scripts/install-wanxiang-model.sh)\n'
 fi
 
 exit "$status"

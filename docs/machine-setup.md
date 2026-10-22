@@ -12,6 +12,10 @@ Last checked: 2026-07-10
   local and are not backed up by this repository.
 - Optional test scheme: `bopomofo_pro` adds a Traditional-Chinese word-level
   grammar model without changing the existing `bopomofo` scheme.
+- Experimental test scheme: `bopomofo_pro_wx` is the same as `bopomofo_pro`
+  but with the much larger Wanxiang grammar model, to compare prediction
+  quality. Not installed by `scripts/setup.sh`; run
+  `scripts/install-wanxiang-model.sh` separately to try it.
 
 ## Maintenance rule
 
